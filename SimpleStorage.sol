@@ -29,7 +29,7 @@ contract SimpleStorage {
 
     //if we dont initalize a variabe it get initialized to 0 automatically
 
-    function store(uint256 _fav_num) public {
+    function store(uint256 _fav_num) public virtual {
         FavNum = _fav_num;
     }
 
@@ -38,9 +38,8 @@ contract SimpleStorage {
     }
 
     function add() public pure returns (uint256) {
-        return (1 + 1);
+        return (1 + 1); //pure and view dont cost gas
     }
 }
 //Some important notes
 //Every contract has its own unique address after deploying
-//view and pure functions dont need gas
