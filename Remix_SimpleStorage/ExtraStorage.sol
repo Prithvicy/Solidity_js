@@ -1,5 +1,6 @@
 //SPDX-identifier : MIT 
 pragma solidity ^0.8.0;
+
 import "./SimpleStorage";
 contract ExtraStorage is SimpleStorage{ // for inheritance use is keyword
     function store(uint256 _fav_num) public override {
